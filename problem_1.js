@@ -1,18 +1,18 @@
 "use strict";
 
 //    
-let hello = "Hello"; 
-let catchRev= [];
+// let hello = "Hello"; 
+// let catchRev= [];
 
 
-function reverseString (input){
-    for (let i = input.length-1; i >= 0; i--){
-        catchRev.push (input[i]);
-    }
-}
+// function reverseString (input){
+//     for (let i = input.length-1; i >= 0; i--){
+//         catchRev.push (input[i]);
+//     }
+// }
 
-let show = reverseString(hello);
-console.log (catchRev.join(""));
+// let show = reverseString(hello);
+// console.log (catchRev.join(""));
 
 
 //
@@ -77,9 +77,40 @@ function sortCharacters (string){
     }
 }
 }
-function filterSortedCharacters (sortedCharacters){
-}
-
 
 sortCharacters(strCharacters);
 console.log (arrCatchCharacters);
+
+//
+//Bonus question
+//
+//function to see if the word is a palindrome
+//1) function to reverse the word and put it into a string 
+//2)function to compare the forward and backward words 
+    //if same, then return or console. 
+
+
+
+let hello = "Hello"; 
+let word = "madam";
+
+
+function reverseString (input){
+    let catchRev= [];
+    for (let i = input.length-1; i >= 0; i--){
+        catchRev.push (input[i]);
+    }
+    return (catchRev.join(""))
+}
+
+function palindrome (word){
+    let reverseWord= reverseString(word);
+    if (reverseWord == word){
+        console.log ("The word '"+ word+ "' is a palindrome!")
+    }
+}
+
+let show = reverseString(hello);
+console.log (show);
+
+let isIt = palindrome (word);
