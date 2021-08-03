@@ -53,3 +53,33 @@ console.log (finalPhrase.join(""));
 
 capitalize (anotherPhrase);
 console.log(finalPhrase.join(""));
+
+//
+//
+
+let strCharacters = "aaaabbbbccd";
+let arrCatchCharacters =[];
+let countOfCharacter= 0;
+let character=""
+
+function sortCharacters (string){
+    for (let i=0; i<string.length; i++){
+    let count=0
+     for(let j=0; j<string.length; j++){
+        if (string[i] === string[j]){
+             count++
+             if (count>1)
+             string[i++];
+    }
+    }
+    if(!arrCatchCharacters.includes(string[i])){            
+  arrCatchCharacters.push (count+string[i]); 
+    }
+}
+}
+function filterSortedCharacters (sortedCharacters){
+}
+
+
+sortCharacters(strCharacters);
+console.log (arrCatchCharacters);
